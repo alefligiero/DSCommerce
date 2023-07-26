@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
+:root {
+    --dsc-color-bg-primary: #e8e8e8;
+    --dsc-color-bg-secundary: #ffe500;
+    --dsc-color-bg-tertiary: #636363;
+
+    --dsc-color-card-bg: #fff;
+    --dsc-color-card-border: #e8e8e8;
+
+    --dsc-color-btn-primary: #3483fa;
+    --dsc-color-btn-inverse: #fff;
+
+    --dsc-color-font-primary: #636363;
+    --dsc-color-font-secundary: #0caf1d;
+    --dsc-color-font-tertiary: #fff;
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -8,11 +24,27 @@
 }
 
 html, body {
-    background-color: #E8E8E8;
+    background-color: var(--dsc-color-bg-primary);
 }
 
+/*-------------------------------------------------------*/
+/* generic styles*/
+
+.dsc-container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.dsc-mb20 {
+    margin-bottom: 20px;
+}
+
+/*-------------------------------------------------------*/
+/* header styles*/
+
 header {
-    background-color: #FFE500;
+    background-color: var(--dsc-color-bg-secundary);
     height: 70px;
     display: flex;
     align-items: center;
@@ -20,39 +52,45 @@ header {
 
 nav {
     display: flex;
-    color: #636363;
+    color: var(--dsc-color-font-primary);
     justify-content: space-between;
     align-items: center;
+}
+
+nav h1{
+    font-size: 24px;
 }
 
 a, a:hover {
     text-decoration: none;
     color: unset;
+    font-size: 14px;
+    font-weight: 700;
 }
 
-.container {
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
-}
+/*-------------------------------------------------------*/
+/* card styles*/
 
-.card {
-    background-color: #FFF;
-    border: 1px solid #D9D9D9;
+.dsc-card {
+    background-color: var(--dsc-color-card-bg);
+    border: 1px solid var(--dsc-color-card-border);
     border-radius: 4px;
 }
 
-.line-bottom {
-    border-bottom: 1px solid #D9D9D9;
+.dsc-line-bottom {
+    border-bottom: 1px solid var(--dsc-color-card-border);
 }
 
-.btn-page-container {
+/*-------------------------------------------------------*/
+/* button styles*/
+
+.dsc-btn-page-container {
     width: 220px;
     display: grid;
     grid-gap: 20px;
 }
 
-.btn {
+.dsc-btn {
     border-radius: 4px;
     height: 42px;
     font-size: 16px;
@@ -62,19 +100,17 @@ a, a:hover {
     align-items: center;
 }
 
-.btn-blue {
-    background-color: #3483FA;
-    color: #fff;
+.dsc-btn-blue {
+    background-color: var(--dsc-color-btn-primary);
+    color: var(--dsc-color-btn-inverse);
 
 }
 
-.btn-white {
-    background-color: #FFF;
-    border: 1px solid #3483FA;
-    color: #3483FA;
+.dsc-btn-white {
+    background-color: var(--dsc-color-btn-inverse);
+    border: 1px solid var(--dsc-color-btn-primary);
+    color: var(--dsc-color-btn-primary);
 }
 
-.mb20 {
-    margin-bottom: 20px;
-}
+
 
